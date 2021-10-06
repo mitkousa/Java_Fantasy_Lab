@@ -1,8 +1,8 @@
-package Game.Player;
+package Game.Character;
 
 import Game.Components.Weapon;
 
-public abstract class Fighter extends Player {
+public abstract class Fighter extends GameCharacter {
     public Weapon weapon;
 
     public Weapon getWeapon() {

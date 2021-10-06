@@ -1,13 +1,13 @@
-package Game.Player;
+package Game.Character;
 
 import Game.Behaviours.IAttack;
 import Game.Behaviours.ICollect;
 import Game.Behaviours.IDefend;
 
-public abstract class Player implements IDefend, IAttack, ICollect {
+public abstract class GameCharacter implements IDefend, IAttack, ICollect {
     private int health;
 
-    public Player(int health) {
+    public GameCharacter(int health) {
         this.health = health;
     }
 

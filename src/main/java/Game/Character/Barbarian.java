@@ -1,11 +1,12 @@
-package Game.Player;
+package Game.Character;
 
 import Game.Components.DefensiveItem;
 import Game.Components.Weapon;
+import Game.Game;
 
 public class Barbarian extends Fighter{
     private DefensiveItem defensiveItem;
-    private Player player;
+    private GameCharacter gameCharacter;
     public Barbarian(int health, Weapon weapon, DefensiveItem defensiveItem) {
         super(health, weapon);
         this.defensiveItem = defensiveItem;
@@ -19,12 +20,12 @@ public class Barbarian extends Fighter{
         this.defensiveItem = defensiveItem;
     }
 
-    public Player getPlayer() {
-        return player;
+    public GameCharacter getGameCharacter() {
+        return gameCharacter;
     }
 
-    public void setPlayer(Player player) {
-        this.player = player;
+    public void setGameCharacter(GameCharacter gameCharacter) {
+        this.gameCharacter = gameCharacter;
     }
 
     @Override
@@ -34,9 +35,9 @@ public class Barbarian extends Fighter{
     }
 
     @Override
-    public void attack(int damage) {
-        int newHealth = player.getHealth() - damage;
-        player.setHealth(newHealth);
+    public void attack(int damage, GameCharacter gameCharacter) {
+        int newHealth = gameCharacter.getHealth() - damage;
+        gameCharacter.setHealth(newHealth);
     }
 }
 
